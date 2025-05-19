@@ -1,0 +1,2908 @@
+[
+    {
+        "id": "577ee28cb7143dd2",
+        "type": "tab",
+        "label": "ASRS_PostgreSQL",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f2efc8655770421d",
+        "type": "s7 out",
+        "z": "577ee28cb7143dd2",
+        "endpoint": "8925beb134134efd",
+        "variable": "Start",
+        "name": "",
+        "x": 950,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "d803e2b50d24c3cd",
+        "type": "inject",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 690,
+        "y": 300,
+        "wires": [
+            [
+                "f2efc8655770421d"
+            ]
+        ]
+    },
+    {
+        "id": "3f15adee42f479f1",
+        "type": "inject",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 690,
+        "y": 340,
+        "wires": [
+            [
+                "f2efc8655770421d"
+            ]
+        ]
+    },
+    {
+        "id": "4e048210a89d0efe",
+        "type": "s7 out",
+        "z": "577ee28cb7143dd2",
+        "endpoint": "8925beb134134efd",
+        "variable": "Store",
+        "name": "",
+        "x": 1330,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "d265fb81d13c4d94",
+        "type": "s7 out",
+        "z": "577ee28cb7143dd2",
+        "endpoint": "8925beb134134efd",
+        "variable": "Reset",
+        "name": "",
+        "x": 550,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "e2ccce8043b69990",
+        "type": "inject",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 210,
+        "y": 140,
+        "wires": [
+            [
+                "d265fb81d13c4d94",
+                "b12f5b559b157b7d"
+            ]
+        ]
+    },
+    {
+        "id": "7bbc50913f82faf1",
+        "type": "inject",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 210,
+        "y": 200,
+        "wires": [
+            [
+                "d265fb81d13c4d94"
+            ]
+        ]
+    },
+    {
+        "id": "4dc7d0f4cd971690",
+        "type": "s7 out",
+        "z": "577ee28cb7143dd2",
+        "endpoint": "8925beb134134efd",
+        "variable": "Target",
+        "name": "",
+        "x": 1330,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "b938eccc373b9241",
+        "type": "s7 in",
+        "z": "577ee28cb7143dd2",
+        "endpoint": "8925beb134134efd",
+        "mode": "single",
+        "variable": "Target2",
+        "diff": true,
+        "name": "",
+        "x": 190,
+        "y": 1840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1cf14b927da4b1ff",
+        "type": "s7 in",
+        "z": "577ee28cb7143dd2",
+        "endpoint": "8925beb134134efd",
+        "mode": "single",
+        "variable": "Target",
+        "diff": true,
+        "name": "",
+        "x": 190,
+        "y": 1780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dc4fea296cc0a8a0",
+        "type": "s7 out",
+        "z": "577ee28cb7143dd2",
+        "endpoint": "8925beb134134efd",
+        "variable": "Retrieve",
+        "name": "",
+        "x": 1660,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "0928844a45984668",
+        "type": "comment",
+        "z": "577ee28cb7143dd2",
+        "name": "Retrieve",
+        "info": "",
+        "x": 260,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "802b3e802d5e7535",
+        "type": "comment",
+        "z": "577ee28cb7143dd2",
+        "name": "Store",
+        "info": "",
+        "x": 650,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "bf6579ac1e79064d",
+        "type": "comment",
+        "z": "577ee28cb7143dd2",
+        "name": "Supply Pallet",
+        "info": "",
+        "x": 710,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "6be2dc5ce93f95b2",
+        "type": "comment",
+        "z": "577ee28cb7143dd2",
+        "name": "Reset",
+        "info": "",
+        "x": 210,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "1dd5ca9b17bf72bf",
+        "type": "change",
+        "z": "577ee28cb7143dd2",
+        "name": "Set target location",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.rows[0].rack_no",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 910,
+        "y": 780,
+        "wires": [
+            [
+                "4dc7d0f4cd971690",
+                "a5478a20da98f571",
+                "0d1188efe5ecf604",
+                "d3c7b2f3b5b623a4"
+            ]
+        ]
+    },
+    {
+        "id": "f061544aa144802c",
+        "type": "s7 out",
+        "z": "577ee28cb7143dd2",
+        "endpoint": "8925beb134134efd",
+        "variable": "Target2",
+        "name": "",
+        "x": 1660,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "c510cf77b2020440",
+        "type": "comment",
+        "z": "577ee28cb7143dd2",
+        "name": "Data",
+        "info": "",
+        "x": 190,
+        "y": 1740,
+        "wires": []
+    },
+    {
+        "id": "b12f5b559b157b7d",
+        "type": "change",
+        "z": "577ee28cb7143dd2",
+        "name": "False",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 410,
+        "y": 240,
+        "wires": [
+            [
+                "f2efc8655770421d",
+                "a9086625ba997248",
+                "7e551d4157abbe2d",
+                "7577f050844cf1c8"
+            ]
+        ]
+    },
+    {
+        "id": "a9086625ba997248",
+        "type": "delay",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 420,
+        "y": 200,
+        "wires": [
+            [
+                "d265fb81d13c4d94"
+            ]
+        ]
+    },
+    {
+        "id": "277e10175b758b28",
+        "type": "ui_button",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "group": "f84d599e9aa51161",
+        "order": 0,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "label": "Reset Button",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "red",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 190,
+        "y": 100,
+        "wires": [
+            [
+                "b12f5b559b157b7d",
+                "d265fb81d13c4d94",
+                "fd876f0f6e792e82"
+            ]
+        ]
+    },
+    {
+        "id": "7e551d4157abbe2d",
+        "type": "ui_switch",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "label": "Switch Incoming Pallet Supply",
+        "tooltip": "",
+        "group": "7517187c6d3c08b1",
+        "order": 1,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 770,
+        "y": 220,
+        "wires": [
+            [
+                "f2efc8655770421d"
+            ]
+        ]
+    },
+    {
+        "id": "f4b536b07a85218d",
+        "type": "ui_button",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "group": "f55e4b3bbb0b8418",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Start Pallet Storage",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "green",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 690,
+        "y": 740,
+        "wires": [
+            [
+                "acb9f951cc1b9ec5"
+            ]
+        ]
+    },
+    {
+        "id": "a5478a20da98f571",
+        "type": "ui_text",
+        "z": "577ee28cb7143dd2",
+        "group": "f55e4b3bbb0b8418",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Target Location",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1360,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "87198683697a32f1",
+        "type": "ui_button",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "group": "840e28708c2e0aba",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Start Retrieving Pallet",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "orange",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1160,
+        "y": 1120,
+        "wires": [
+            [
+                "d190b7904eee1df0",
+                "274ee99f5a1b3cb0",
+                "9a294d7dc870136b"
+            ]
+        ]
+    },
+    {
+        "id": "ed15f9d797eb4a5d",
+        "type": "ui_text",
+        "z": "577ee28cb7143dd2",
+        "group": "840e28708c2e0aba",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Target Location",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1780,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "0084f59ff8d9bd43",
+        "type": "s7 in",
+        "z": "577ee28cb7143dd2",
+        "endpoint": "8925beb134134efd",
+        "mode": "single",
+        "variable": "Busy",
+        "diff": true,
+        "name": "",
+        "x": 190,
+        "y": 1900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "acb3461327ddbc49",
+        "type": "s7 in",
+        "z": "577ee28cb7143dd2",
+        "endpoint": "8925beb134134efd",
+        "mode": "single",
+        "variable": "Busy",
+        "diff": true,
+        "name": "",
+        "x": 190,
+        "y": 920,
+        "wires": [
+            [
+                "ea531f3e86bd68c5",
+                "ad471f7ec0e81756"
+            ]
+        ]
+    },
+    {
+        "id": "45049b2162ee8fbf",
+        "type": "comment",
+        "z": "577ee28cb7143dd2",
+        "name": "Check Stacker Busy",
+        "info": "",
+        "x": 230,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "ea531f3e86bd68c5",
+        "type": "switch",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 190,
+        "y": 980,
+        "wires": [
+            [
+                "19ebc59dce8ce6f2"
+            ],
+            [
+                "026a5c5743d66778"
+            ]
+        ]
+    },
+    {
+        "id": "026a5c5743d66778",
+        "type": "change",
+        "z": "577ee28cb7143dd2",
+        "name": "true",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 350,
+        "y": 1000,
+        "wires": [
+            [
+                "a0d80d543eae76a5",
+                "d7249149097482e2",
+                "37a42cde015d5153"
+            ]
+        ]
+    },
+    {
+        "id": "19ebc59dce8ce6f2",
+        "type": "change",
+        "z": "577ee28cb7143dd2",
+        "name": "false",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 350,
+        "y": 940,
+        "wires": [
+            [
+                "87198683697a32f1",
+                "f4b536b07a85218d",
+                "93c04cc40447640f"
+            ]
+        ]
+    },
+    {
+        "id": "5372767486c76e41",
+        "type": "comment",
+        "z": "577ee28cb7143dd2",
+        "name": "Check At Load Sensor",
+        "info": "",
+        "x": 240,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "ab7385cef27d9b93",
+        "type": "s7 in",
+        "z": "577ee28cb7143dd2",
+        "endpoint": "8925beb134134efd",
+        "mode": "single",
+        "variable": "At Load",
+        "diff": true,
+        "name": "",
+        "x": 190,
+        "y": 540,
+        "wires": [
+            [
+                "ab6597e15784f7bf"
+            ]
+        ]
+    },
+    {
+        "id": "a0d80d543eae76a5",
+        "type": "switch",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "property": "At_Load",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 190,
+        "y": 680,
+        "wires": [
+            [
+                "30de04e3ab2f7e8f"
+            ],
+            [
+                "46db0737172c7919"
+            ]
+        ]
+    },
+    {
+        "id": "46db0737172c7919",
+        "type": "change",
+        "z": "577ee28cb7143dd2",
+        "name": "true",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 350,
+        "y": 640,
+        "wires": [
+            [
+                "6cbc788a1f605ded"
+            ]
+        ]
+    },
+    {
+        "id": "30de04e3ab2f7e8f",
+        "type": "change",
+        "z": "577ee28cb7143dd2",
+        "name": "false",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 350,
+        "y": 600,
+        "wires": [
+            [
+                "f4b536b07a85218d"
+            ]
+        ]
+    },
+    {
+        "id": "cf3edca2578da9f6",
+        "type": "change",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "rack_no",
+                "pt": "msg",
+                "to": "payload.rows[0].rack_no",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "id_pallet",
+                "pt": "msg",
+                "to": "payload.rows[0].id_pallet",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1540,
+        "y": 1260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ab6597e15784f7bf",
+        "type": "change",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "At_Load",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 350,
+        "y": 540,
+        "wires": [
+            [
+                "a0d80d543eae76a5"
+            ]
+        ]
+    },
+    {
+        "id": "ad471f7ec0e81756",
+        "type": "change",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "Busy",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6cbc788a1f605ded",
+        "type": "switch",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "property": "Busy",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 350,
+        "y": 700,
+        "wires": [
+            [
+                "1ee0988294fe9217"
+            ],
+            [
+                "17345498324e7256"
+            ]
+        ]
+    },
+    {
+        "id": "1ee0988294fe9217",
+        "type": "change",
+        "z": "577ee28cb7143dd2",
+        "name": "false",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 350,
+        "y": 740,
+        "wires": [
+            [
+                "f4b536b07a85218d"
+            ]
+        ]
+    },
+    {
+        "id": "17345498324e7256",
+        "type": "change",
+        "z": "577ee28cb7143dd2",
+        "name": "true",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 350,
+        "y": 780,
+        "wires": [
+            [
+                "f4b536b07a85218d",
+                "c1a9f86fa57bd2d8"
+            ]
+        ]
+    },
+    {
+        "id": "88d486a4cf6df0f0",
+        "type": "s7 in",
+        "z": "577ee28cb7143dd2",
+        "endpoint": "8925beb134134efd",
+        "mode": "single",
+        "variable": "ID_pallet",
+        "diff": true,
+        "name": "",
+        "x": 200,
+        "y": 1960,
+        "wires": [
+            [
+                "75cbc15bf77b1013"
+            ]
+        ]
+    },
+    {
+        "id": "6e50a06ffb369844",
+        "type": "change",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "id_pallet",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 1920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7577f050844cf1c8",
+        "type": "link out",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "e87672182c3d30b9",
+            "56150bf3d1877594",
+            "eabfdc5fe75ffcae",
+            "f3d998faf62646c7",
+            "394d1f2d7081d56f",
+            "ac49d4d8e21cb05a",
+            "53c2dbeb0baaca5c",
+            "025c931caef5ecb3",
+            "4fbc20c36534624d"
+        ],
+        "x": 655,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "e87672182c3d30b9",
+        "type": "link in",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "links": [
+            "7577f050844cf1c8"
+        ],
+        "x": 1485,
+        "y": 1080,
+        "wires": [
+            [
+                "dc4fea296cc0a8a0"
+            ]
+        ]
+    },
+    {
+        "id": "56150bf3d1877594",
+        "type": "link in",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "links": [
+            "7577f050844cf1c8"
+        ],
+        "x": 1175,
+        "y": 580,
+        "wires": [
+            [
+                "4e048210a89d0efe"
+            ]
+        ]
+    },
+    {
+        "id": "b3510fee07dc5a7b",
+        "type": "postgrestor",
+        "z": "577ee28cb7143dd2",
+        "name": "Get Pallet Data",
+        "query": "SELECT * FROM master_material where id_pallet={{msg.payload}};",
+        "postgresDB": "ccdc5790adefc801",
+        "output": true,
+        "outputs": 1,
+        "x": 540,
+        "y": 1960,
+        "wires": [
+            [
+                "122a73e87cddb1d3",
+                "c23058a9088751b3",
+                "a8b92b7ccfebb5fe"
+            ]
+        ]
+    },
+    {
+        "id": "75cbc15bf77b1013",
+        "type": "switch",
+        "z": "577ee28cb7143dd2",
+        "name": ">0",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 350,
+        "y": 1960,
+        "wires": [
+            [
+                "b3510fee07dc5a7b",
+                "6e50a06ffb369844"
+            ],
+            [
+                "7b43b30c4c41d273",
+                "bbeeba02c2b47686",
+                "bffefe60d34e7e53"
+            ]
+        ]
+    },
+    {
+        "id": "8d4f359b01c2cdd1",
+        "type": "ui_text",
+        "z": "577ee28cb7143dd2",
+        "group": "f55e4b3bbb0b8418",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "ID Pallet",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 900,
+        "y": 1960,
+        "wires": []
+    },
+    {
+        "id": "122a73e87cddb1d3",
+        "type": "change",
+        "z": "577ee28cb7143dd2",
+        "name": "ID Pallet",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.rows[0].id_pallet",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 720,
+        "y": 1960,
+        "wires": [
+            [
+                "8d4f359b01c2cdd1"
+            ]
+        ]
+    },
+    {
+        "id": "c23058a9088751b3",
+        "type": "change",
+        "z": "577ee28cb7143dd2",
+        "name": "Pallet Name",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.rows[0].name",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 730,
+        "y": 2000,
+        "wires": [
+            [
+                "559fba9bce4dc10c"
+            ]
+        ]
+    },
+    {
+        "id": "559fba9bce4dc10c",
+        "type": "ui_text",
+        "z": "577ee28cb7143dd2",
+        "group": "f55e4b3bbb0b8418",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Pallet Name",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 910,
+        "y": 2000,
+        "wires": []
+    },
+    {
+        "id": "7b43b30c4c41d273",
+        "type": "change",
+        "z": "577ee28cb7143dd2",
+        "name": "ID Pallet",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "0",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 720,
+        "y": 2040,
+        "wires": [
+            [
+                "8d4f359b01c2cdd1"
+            ]
+        ]
+    },
+    {
+        "id": "bbeeba02c2b47686",
+        "type": "change",
+        "z": "577ee28cb7143dd2",
+        "name": "Pallet Name",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "-",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 730,
+        "y": 2080,
+        "wires": [
+            [
+                "559fba9bce4dc10c"
+            ]
+        ]
+    },
+    {
+        "id": "acb9f951cc1b9ec5",
+        "type": "postgrestor",
+        "z": "577ee28cb7143dd2",
+        "name": "Get Empty Rack",
+        "query": "SELECT rack_no FROM location_rack where id_pallet is null order by rack_no limit 1;",
+        "postgresDB": "ccdc5790adefc801",
+        "output": true,
+        "outputs": 1,
+        "x": 900,
+        "y": 740,
+        "wires": [
+            [
+                "1dd5ca9b17bf72bf"
+            ]
+        ]
+    },
+    {
+        "id": "0d1188efe5ecf604",
+        "type": "change",
+        "z": "577ee28cb7143dd2",
+        "name": "Start",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1130,
+        "y": 660,
+        "wires": [
+            [
+                "4e048210a89d0efe"
+            ]
+        ]
+    },
+    {
+        "id": "2e625569c136f74e",
+        "type": "postgrestor",
+        "z": "577ee28cb7143dd2",
+        "name": "Record Data",
+        "query": "UPDATE location_rack set id_pallet={{msg.id_pallet}}, storage_time = now() where rack_no={{msg.payload}};\n",
+        "postgresDB": "ccdc5790adefc801",
+        "output": true,
+        "outputs": 1,
+        "x": 1350,
+        "y": 840,
+        "wires": [
+            [
+                "5ad6f80ba3507bfe"
+            ]
+        ]
+    },
+    {
+        "id": "d3c7b2f3b5b623a4",
+        "type": "change",
+        "z": "577ee28cb7143dd2",
+        "name": "Get ID Pallet",
+        "rules": [
+            {
+                "t": "set",
+                "p": "id_pallet",
+                "pt": "msg",
+                "to": "id_pallet",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1150,
+        "y": 840,
+        "wires": [
+            [
+                "2e625569c136f74e"
+            ]
+        ]
+    },
+    {
+        "id": "789c993eb2824c79",
+        "type": "inject",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 740,
+        "y": 640,
+        "wires": [
+            [
+                "acb9f951cc1b9ec5"
+            ]
+        ]
+    },
+    {
+        "id": "fd876f0f6e792e82",
+        "type": "postgrestor",
+        "z": "577ee28cb7143dd2",
+        "name": "Empty All Rack",
+        "query": "UPDATE location_rack set id_pallet = null, storage_time = null;",
+        "postgresDB": "ccdc5790adefc801",
+        "output": true,
+        "outputs": 1,
+        "x": 580,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c1a9f86fa57bd2d8",
+        "type": "change",
+        "z": "577ee28cb7143dd2",
+        "name": "Reset target location",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "-",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 920,
+        "y": 820,
+        "wires": [
+            [
+                "a5478a20da98f571"
+            ]
+        ]
+    },
+    {
+        "id": "eabfdc5fe75ffcae",
+        "type": "link in",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "links": [
+            "7577f050844cf1c8"
+        ],
+        "x": 755,
+        "y": 860,
+        "wires": [
+            [
+                "c1a9f86fa57bd2d8"
+            ]
+        ]
+    },
+    {
+        "id": "d7249149097482e2",
+        "type": "postgrestor",
+        "z": "577ee28cb7143dd2",
+        "name": "Get Pallet in Rack",
+        "query": "SELECT distinct a.id_pallet,name FROM location_rack a inner join master_material b on a.id_pallet = b.id_pallet \nwhere a.id_pallet is not null order by id_pallet;",
+        "postgresDB": "ccdc5790adefc801",
+        "output": true,
+        "outputs": 1,
+        "x": 290,
+        "y": 1120,
+        "wires": [
+            [
+                "1c6c3e031a3338fb"
+            ]
+        ]
+    },
+    {
+        "id": "1c6c3e031a3338fb",
+        "type": "function",
+        "z": "577ee28cb7143dd2",
+        "name": "create array",
+        "func": "\nvar i;\nlist_name = [];\nfor (i = 0; i < msg.payload.rows.length; i++) \n{\n  list_name.push({\"name\":msg.payload.rows[i].name});\n}\n\nmsg.payload = list_name;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 1120,
+        "wires": [
+            [
+                "91a80d7fa3c1ed48"
+            ]
+        ]
+    },
+    {
+        "id": "91a80d7fa3c1ed48",
+        "type": "function",
+        "z": "577ee28cb7143dd2",
+        "name": "format array of objects for dropdown in dashboard",
+        "func": "//Reformat array to work with dashboard\nvar reformattedArray = msg.payload.map(obj =>{\n    //declare the reformatted object\n    var rObj = {};\n    //format it for drop down\n    //\"label\":\"value\" is the format so lets move the value to the label and add some txt as well\n    //you can also replce the txt with a var if you want\n    rObj[obj.name] = obj.name;\n    return rObj;\n});\nmsg.payload =  reformattedArray;\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 1120,
+        "wires": [
+            [
+                "ecdd1985d9bbf6f1"
+            ]
+        ]
+    },
+    {
+        "id": "ecdd1985d9bbf6f1",
+        "type": "change",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "options",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 1180,
+        "wires": [
+            [
+                "53b8a9d1d0723fe0"
+            ]
+        ]
+    },
+    {
+        "id": "53b8a9d1d0723fe0",
+        "type": "ui_dropdown",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "label": "Select Pallet Name",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "840e28708c2e0aba",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 570,
+        "y": 1180,
+        "wires": [
+            [
+                "f72f709860b99cea"
+            ]
+        ]
+    },
+    {
+        "id": "f72f709860b99cea",
+        "type": "change",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "pallet_name",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 560,
+        "y": 1240,
+        "wires": [
+            [
+                "8aac8489a6a5a052"
+            ]
+        ]
+    },
+    {
+        "id": "8aac8489a6a5a052",
+        "type": "switch",
+        "z": "577ee28cb7143dd2",
+        "name": "is text empty?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "false"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 740,
+        "y": 1240,
+        "wires": [
+            [
+                "88e6bb6045404feb"
+            ],
+            [
+                "ab3ecd1bc186b12c"
+            ]
+        ]
+    },
+    {
+        "id": "88e6bb6045404feb",
+        "type": "change",
+        "z": "577ee28cb7143dd2",
+        "name": "enabled false",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 930,
+        "y": 1220,
+        "wires": [
+            [
+                "87198683697a32f1"
+            ]
+        ]
+    },
+    {
+        "id": "ab3ecd1bc186b12c",
+        "type": "change",
+        "z": "577ee28cb7143dd2",
+        "name": "enabled true",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 930,
+        "y": 1260,
+        "wires": [
+            [
+                "87198683697a32f1",
+                "457d5ce9a5923251"
+            ]
+        ]
+    },
+    {
+        "id": "68b910663c9b1b82",
+        "type": "link in",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "links": [
+            "5ad6f80ba3507bfe"
+        ],
+        "x": 145,
+        "y": 1120,
+        "wires": [
+            [
+                "d7249149097482e2"
+            ]
+        ]
+    },
+    {
+        "id": "5ad6f80ba3507bfe",
+        "type": "link out",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "68b910663c9b1b82"
+        ],
+        "x": 1525,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "457d5ce9a5923251",
+        "type": "change",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "name",
+                "pt": "msg",
+                "to": "topic",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1140,
+        "y": 1340,
+        "wires": [
+            [
+                "227282ebfcfda661"
+            ]
+        ]
+    },
+    {
+        "id": "227282ebfcfda661",
+        "type": "postgrestor",
+        "z": "577ee28cb7143dd2",
+        "name": "Get Location",
+        "query": "SELECT a.id_pallet, a.rack_no, a.storage_time,b.image FROM location_rack a \ninner join master_material b on a.id_pallet = b.id_pallet \nwhere b.name = '{{msg.name}}' order by a.storage_time limit 1;\n",
+        "postgresDB": "ccdc5790adefc801",
+        "output": true,
+        "outputs": 1,
+        "x": 1330,
+        "y": 1340,
+        "wires": [
+            [
+                "cf3edca2578da9f6",
+                "adb77321e7ded05a",
+                "350ece41a35d180b",
+                "c2f54cbaf9ce72f3",
+                "9822b8e20ad664fb"
+            ]
+        ]
+    },
+    {
+        "id": "d190b7904eee1df0",
+        "type": "function",
+        "z": "577ee28cb7143dd2",
+        "name": "set False",
+        "func": "msg.payload = false;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1140,
+        "y": 1180,
+        "wires": [
+            [
+                "fe2f60d5eeb55e84"
+            ]
+        ]
+    },
+    {
+        "id": "1ff90d69ab9d8776",
+        "type": "link in",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "links": [
+            "fe2f60d5eeb55e84"
+        ],
+        "x": 365,
+        "y": 1240,
+        "wires": [
+            [
+                "53b8a9d1d0723fe0"
+            ]
+        ]
+    },
+    {
+        "id": "fe2f60d5eeb55e84",
+        "type": "link out",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "1ff90d69ab9d8776"
+        ],
+        "x": 1185,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "e8d280a41d7a0753",
+        "type": "ui_text",
+        "z": "577ee28cb7143dd2",
+        "group": "840e28708c2e0aba",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "ID Pallet",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1760,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "e9c1eab9faf00d60",
+        "type": "ui_text",
+        "z": "577ee28cb7143dd2",
+        "group": "840e28708c2e0aba",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Pallet Name",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1770,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "274ee99f5a1b3cb0",
+        "type": "change",
+        "z": "577ee28cb7143dd2",
+        "name": "Set True",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1440,
+        "y": 1120,
+        "wires": [
+            [
+                "dc4fea296cc0a8a0"
+            ]
+        ]
+    },
+    {
+        "id": "9a294d7dc870136b",
+        "type": "change",
+        "z": "577ee28cb7143dd2",
+        "name": "Set Location",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "retrieving_rack",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1450,
+        "y": 1180,
+        "wires": [
+            [
+                "f061544aa144802c",
+                "97979cc64a0920ba"
+            ]
+        ]
+    },
+    {
+        "id": "77a5738c8fce7474",
+        "type": "change",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "retrieving_rack",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1810,
+        "y": 1340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "405c32dbcebcd05b",
+        "type": "inject",
+        "z": "577ee28cb7143dd2",
+        "name": "initial",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "-",
+        "payloadType": "str",
+        "x": 1570,
+        "y": 1460,
+        "wires": [
+            [
+                "e9c1eab9faf00d60",
+                "e8d280a41d7a0753",
+                "ed15f9d797eb4a5d"
+            ]
+        ]
+    },
+    {
+        "id": "adb77321e7ded05a",
+        "type": "change",
+        "z": "577ee28cb7143dd2",
+        "name": "Rack No",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.rows[0].rack_no",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1520,
+        "y": 1340,
+        "wires": [
+            [
+                "ed15f9d797eb4a5d",
+                "77a5738c8fce7474"
+            ]
+        ]
+    },
+    {
+        "id": "350ece41a35d180b",
+        "type": "change",
+        "z": "577ee28cb7143dd2",
+        "name": "ID Pallet",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.rows[0].id_pallet",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1520,
+        "y": 1380,
+        "wires": [
+            [
+                "e8d280a41d7a0753"
+            ]
+        ]
+    },
+    {
+        "id": "c2f54cbaf9ce72f3",
+        "type": "change",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "name",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1540,
+        "y": 1420,
+        "wires": [
+            [
+                "e9c1eab9faf00d60"
+            ]
+        ]
+    },
+    {
+        "id": "37a42cde015d5153",
+        "type": "link out",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "5574d917b9fa1ff8",
+            "e4900e400f895e31",
+            "d275d811d30c59cd"
+        ],
+        "x": 505,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "5574d917b9fa1ff8",
+        "type": "link in",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "links": [
+            "37a42cde015d5153"
+        ],
+        "x": 1365,
+        "y": 1520,
+        "wires": [
+            [
+                "d8ba06c209c8f592"
+            ]
+        ]
+    },
+    {
+        "id": "d8ba06c209c8f592",
+        "type": "change",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "-",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1540,
+        "y": 1520,
+        "wires": [
+            [
+                "ed15f9d797eb4a5d",
+                "e8d280a41d7a0753",
+                "e9c1eab9faf00d60"
+            ]
+        ]
+    },
+    {
+        "id": "97979cc64a0920ba",
+        "type": "postgrestor",
+        "z": "577ee28cb7143dd2",
+        "name": "Record Data",
+        "query": "UPDATE location_rack set id_pallet=null, storage_time = null where rack_no={{msg.payload}};\n",
+        "postgresDB": "ccdc5790adefc801",
+        "output": true,
+        "outputs": 1,
+        "x": 1670,
+        "y": 1080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "93c04cc40447640f",
+        "type": "link out",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "02c28a4ae2885c3c"
+        ],
+        "x": 585,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "02c28a4ae2885c3c",
+        "type": "link in",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "links": [
+            "93c04cc40447640f"
+        ],
+        "x": 365,
+        "y": 1300,
+        "wires": [
+            [
+                "53b8a9d1d0723fe0"
+            ]
+        ]
+    },
+    {
+        "id": "c33a4e6eee222ab5",
+        "type": "ui_template",
+        "z": "577ee28cb7143dd2",
+        "group": "840e28708c2e0aba",
+        "name": "",
+        "order": 2,
+        "width": "6",
+        "height": "4",
+        "format": "<div align=center>\n    <img src={{msg.payload}} alt=\"Material\">\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1740,
+        "y": 1560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9822b8e20ad664fb",
+        "type": "change",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.rows[0].image",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1540,
+        "y": 1560,
+        "wires": [
+            [
+                "c33a4e6eee222ab5"
+            ]
+        ]
+    },
+    {
+        "id": "fadd9c1ff48946aa",
+        "type": "inject",
+        "z": "577ee28cb7143dd2",
+        "name": "initial",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "https://docs.factoryio.com/manual/parts/img/items/pallet.png",
+        "payloadType": "str",
+        "x": 1570,
+        "y": 1600,
+        "wires": [
+            [
+                "c33a4e6eee222ab5"
+            ]
+        ]
+    },
+    {
+        "id": "e4900e400f895e31",
+        "type": "link in",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "links": [
+            "37a42cde015d5153"
+        ],
+        "x": 1365,
+        "y": 1660,
+        "wires": [
+            [
+                "5f0e8c01c34e6022"
+            ]
+        ]
+    },
+    {
+        "id": "5f0e8c01c34e6022",
+        "type": "change",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "https://docs.factoryio.com/manual/parts/img/items/pallet.png",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1540,
+        "y": 1660,
+        "wires": [
+            [
+                "c33a4e6eee222ab5"
+            ]
+        ]
+    },
+    {
+        "id": "66085557520eb86b",
+        "type": "ui_template",
+        "z": "577ee28cb7143dd2",
+        "group": "f55e4b3bbb0b8418",
+        "name": "",
+        "order": 1,
+        "width": "6",
+        "height": "4",
+        "format": "<div align=center>\n    <img src={{msg.payload}} alt=\"Material\">\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 940,
+        "y": 2120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a8b92b7ccfebb5fe",
+        "type": "change",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.rows[0].image",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 740,
+        "y": 2120,
+        "wires": [
+            [
+                "66085557520eb86b"
+            ]
+        ]
+    },
+    {
+        "id": "ec4e842586e6b6c8",
+        "type": "inject",
+        "z": "577ee28cb7143dd2",
+        "name": "initial",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "https://docs.factoryio.com/manual/parts/img/items/pallet.png",
+        "payloadType": "str",
+        "x": 770,
+        "y": 2160,
+        "wires": [
+            [
+                "66085557520eb86b"
+            ]
+        ]
+    },
+    {
+        "id": "bffefe60d34e7e53",
+        "type": "change",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "https://docs.factoryio.com/manual/parts/img/items/pallet.png",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 740,
+        "y": 2200,
+        "wires": [
+            [
+                "66085557520eb86b"
+            ]
+        ]
+    },
+    {
+        "id": "f3d998faf62646c7",
+        "type": "link in",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "links": [
+            "7577f050844cf1c8"
+        ],
+        "x": 145,
+        "y": 1200,
+        "wires": [
+            [
+                "d7249149097482e2",
+                "57efd7a9e90cbc78",
+                "ea9fa88e72a65ab4"
+            ]
+        ]
+    },
+    {
+        "id": "394d1f2d7081d56f",
+        "type": "link in",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "links": [
+            "7577f050844cf1c8"
+        ],
+        "x": 1365,
+        "y": 1720,
+        "wires": [
+            [
+                "5f0e8c01c34e6022"
+            ]
+        ]
+    },
+    {
+        "id": "ac49d4d8e21cb05a",
+        "type": "link in",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "links": [
+            "7577f050844cf1c8"
+        ],
+        "x": 1365,
+        "y": 1560,
+        "wires": [
+            [
+                "d8ba06c209c8f592"
+            ]
+        ]
+    },
+    {
+        "id": "4fbc20c36534624d",
+        "type": "link in",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "links": [
+            "7577f050844cf1c8"
+        ],
+        "x": 235,
+        "y": 1040,
+        "wires": [
+            [
+                "19ebc59dce8ce6f2"
+            ]
+        ]
+    },
+    {
+        "id": "4e82c21f4e174827",
+        "type": "ui_table",
+        "z": "577ee28cb7143dd2",
+        "group": "13afc917589beae6",
+        "name": "Data Location",
+        "order": 3,
+        "width": "18",
+        "height": "8",
+        "columns": [],
+        "outputs": 1,
+        "cts": true,
+        "x": 740,
+        "y": 1380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "912075f769a6da3b",
+        "type": "function",
+        "z": "577ee28cb7143dd2",
+        "name": "create array",
+        "func": "\nvar i;\nvar list_location = [];\nfor (i = 0; i < msg.payload.rows.length; i++) \n{\n  list_location.push({\"Rack No\":msg.payload.rows[i]['rack_no'],\"ID Pallet\":msg.payload.rows[i]['id_pallet'],\n  \"Pallet Name\":msg.payload.rows[i]['name'],\"Value\":msg.payload.rows[i]['value'],\"Storage Time\":msg.payload.rows[i]['storage_time']});\n}\n\nmsg.payload = list_location;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 1380,
+        "wires": [
+            [
+                "4e82c21f4e174827"
+            ]
+        ]
+    },
+    {
+        "id": "57efd7a9e90cbc78",
+        "type": "postgrestor",
+        "z": "577ee28cb7143dd2",
+        "name": "Get Table Location",
+        "query": "SELECT a.rack_no, a.id_pallet,TO_CHAR(a.storage_time,'YYYY-MM-DD HH24:MI:ss') as storage_time,b.name,b.value \nFROM location_rack a \ninner join master_material b on a.id_pallet=b.id_pallet\norder by a.rack_no ;\n",
+        "postgresDB": "ccdc5790adefc801",
+        "output": true,
+        "outputs": 1,
+        "x": 330,
+        "y": 1380,
+        "wires": [
+            [
+                "912075f769a6da3b",
+                "c6fc63352cc7ed5f"
+            ]
+        ]
+    },
+    {
+        "id": "791198563deca12f",
+        "type": "comment",
+        "z": "577ee28cb7143dd2",
+        "name": "Update Table",
+        "info": "",
+        "x": 310,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "d275d811d30c59cd",
+        "type": "link in",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "links": [
+            "37a42cde015d5153"
+        ],
+        "x": 185,
+        "y": 1380,
+        "wires": [
+            [
+                "57efd7a9e90cbc78",
+                "ea9fa88e72a65ab4"
+            ]
+        ]
+    },
+    {
+        "id": "6bf94293f65bd1ff",
+        "type": "drawsvg-local",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "x": 740,
+        "y": 1340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9e2dda9954d06318",
+        "type": "ui_svg_graphics",
+        "z": "577ee28cb7143dd2",
+        "group": "ca8352cc86b78523",
+        "order": 0,
+        "width": "18",
+        "height": "9",
+        "svgString": "<svg xmlns:inkscape=\"http://www.inkscape.org/namespaces/inkscape\" xmlns:sodipodi=\"http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"100%\" height=\"100%\" viewBox=\"7.105378150939941 25.886714935302734 285.8006896972656 180.77145385742188\" version=\"1.1\" id=\"svg5\" inkscape:version=\"1.1.1 (3bf5ae0d25, 2021-09-20)\" sodipodi:docname=\"ASRS_Rack.svg\" preserveAspectRatio=\"xMinYMin meet\"><rect id=\"svgEditorBackground\" x=\"0\" y=\"0\" width=\"297\" height=\"210\" style=\"fill:none;stroke:none\"/>\n  <sodipodi:namedview id=\"namedview7\" pagecolor=\"#ffffff\" bordercolor=\"#666666\" borderopacity=\"1.0\" inkscape:pageshadow=\"2\" inkscape:pageopacity=\"0.0\" inkscape:pagecheckerboard=\"0\" inkscape:document-units=\"mm\" showgrid=\"false\" inkscape:zoom=\"0.49887767\" inkscape:cx=\"452.01462\" inkscape:cy=\"421.94713\" inkscape:window-width=\"1366\" inkscape:window-height=\"745\" inkscape:window-x=\"-8\" inkscape:window-y=\"-8\" inkscape:window-maximized=\"1\" inkscape:current-layer=\"layer1\"/>\n  <defs id=\"defs2\">\n\t\n\t\n\t\n\n\t\t\n\t\t\n\t\t\n\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t</defs>\n  <g inkscape:label=\"Layer 1\" inkscape:groupmode=\"layer\" id=\"layer1\">\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"m 222.32917,165.39754 h -16.63054 v -13.09192 c 0,-1.05276 0.9446,-1.90454 2.11207,-1.90454 h 12.4064 c 1.16747,0 2.11207,0.85178 2.11207,1.90454 z\" id=\"loc12\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"m 247.27497,165.39754 h -16.63054 v -13.09192 c 0,-1.05276 0.9446,-1.90454 2.11207,-1.90454 h 12.4064 c 1.16747,0 2.11207,0.85178 2.11207,1.90454 z\" id=\"loc11\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"m 272.22077,165.39754 h -16.63054 v -13.09192 c 0,-1.05276 0.9446,-1.90454 2.11207,-1.90454 h 12.4064 c 1.16747,0 2.11207,0.85178 2.11207,1.90454 z\" id=\"loc10\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"M 222.32917,193.89075 H 205.69863 V 180.799 c 0,-1.05275 0.9446,-1.90454 2.11207,-1.90454 h 12.4064 c 1.16747,0 2.11207,0.85179 2.11207,1.90454 z\" id=\"loc3\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"M 247.27497,193.89075 H 230.64443 V 180.799 c 0,-1.05275 0.9446,-1.90454 2.11207,-1.90454 h 12.4064 c 1.16747,0 2.11207,0.85179 2.11207,1.90454 z\" id=\"loc2\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"M 272.22077,193.89075 H 255.59023 V 180.799 c 0,-1.05275 0.9446,-1.90454 2.11207,-1.90454 h 12.4064 c 1.16747,0 2.11207,0.85179 2.11207,1.90454 z\" id=\"loc1\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"m 222.32917,136.90433 h -16.63054 v -13.09192 c 0,-1.05276 0.9446,-1.90454 2.11207,-1.90454 h 12.4064 c 1.16747,0 2.11207,0.85178 2.11207,1.90454 z\" id=\"loc21\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"m 247.27497,136.90433 h -16.63054 v -13.09192 c 0,-1.05276 0.9446,-1.90454 2.11207,-1.90454 h 12.4064 c 1.16747,0 2.11207,0.85178 2.11207,1.90454 z\" id=\"loc20\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"m 272.22077,136.90433 h -16.63054 v -13.09192 c 0,-1.05276 0.9446,-1.90454 2.11207,-1.90454 h 12.4064 c 1.16747,0 2.11207,0.85178 2.11207,1.90454 z\" id=\"loc19\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"m 133.17239,164.14754 h -16.63054 v -13.09192 c 0,-1.05276 0.9446,-1.90454 2.11207,-1.90454 h 12.4064 c 1.16747,0 2.11207,0.85178 2.11207,1.90454 z\" id=\"loc15\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"m 158.11819,164.14754 h -16.63054 v -13.09192 c 0,-1.05276 0.9446,-1.90454 2.11207,-1.90454 h 12.4064 c 1.16747,0 2.11207,0.85178 2.11207,1.90454 z\" id=\"loc14\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"m 183.06399,164.14754 h -16.63054 v -13.09192 c 0,-1.05276 0.9446,-1.90454 2.11207,-1.90454 h 12.4064 c 1.16747,0 2.11207,0.85178 2.11207,1.90454 z\" id=\"loc13\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"M 133.17239,192.64075 H 116.54185 V 179.549 c 0,-1.05275 0.9446,-1.90454 2.11207,-1.90454 h 12.4064 c 1.16747,0 2.11207,0.85179 2.11207,1.90454 z\" id=\"loc6\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"M 158.11819,192.64075 H 141.48765 V 179.549 c 0,-1.05275 0.9446,-1.90454 2.11207,-1.90454 h 12.4064 c 1.16747,0 2.11207,0.85179 2.11207,1.90454 z\" id=\"loc5\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"M 183.06399,192.64075 H 166.43345 V 179.549 c 0,-1.05275 0.9446,-1.90454 2.11207,-1.90454 h 12.4064 c 1.16747,0 2.11207,0.85179 2.11207,1.90454 z\" id=\"loc4\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"m 133.17239,135.65433 h -16.63054 v -13.09192 c 0,-1.05276 0.9446,-1.90454 2.11207,-1.90454 h 12.4064 c 1.16747,0 2.11207,0.85178 2.11207,1.90454 z\" id=\"loc24\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"m 158.11819,135.65433 h -16.63054 v -13.09192 c 0,-1.05276 0.9446,-1.90454 2.11207,-1.90454 h 12.4064 c 1.16747,0 2.11207,0.85178 2.11207,1.90454 z\" id=\"loc23\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"m 183.06399,135.65433 h -16.63054 v -13.09192 c 0,-1.05276 0.9446,-1.90454 2.11207,-1.90454 h 12.4064 c 1.16747,0 2.11207,0.85178 2.11207,1.90454 z\" id=\"loc22\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"M 44.231194,163.89799 H 27.600661 v -13.09192 c 0,-1.05276 0.9446,-1.90454 2.112068,-1.90454 h 12.406397 c 1.167468,0 2.112068,0.85178 2.112068,1.90454 z\" id=\"loc18\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"M 69.176993,163.89799 H 52.54646 v -13.09192 c 0,-1.05276 0.9446,-1.90454 2.112068,-1.90454 h 12.406397 c 1.167468,0 2.112068,0.85178 2.112068,1.90454 z\" id=\"loc17\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"M 94.122792,163.89799 H 77.49226 v -13.09192 c 0,-1.05276 0.944599,-1.90454 2.112067,-1.90454 h 12.406397 c 1.167469,0 2.112068,0.85178 2.112068,1.90454 z\" id=\"loc16\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"M 44.231194,192.3912 H 27.600661 v -13.09175 c 0,-1.05275 0.9446,-1.90454 2.112068,-1.90454 h 12.406397 c 1.167468,0 2.112068,0.85179 2.112068,1.90454 z\" id=\"loc9\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"M 69.176993,192.3912 H 52.54646 v -13.09175 c 0,-1.05275 0.9446,-1.90454 2.112068,-1.90454 h 12.406397 c 1.167468,0 2.112068,0.85179 2.112068,1.90454 z\" id=\"loc8\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"M 94.122792,192.3912 H 77.49226 v -13.09175 c 0,-1.05275 0.944599,-1.90454 2.112067,-1.90454 h 12.406397 c 1.167469,0 2.112068,0.85179 2.112068,1.90454 z\" id=\"loc7\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"M 44.231194,135.40478 H 27.600661 v -13.09192 c 0,-1.05276 0.9446,-1.90454 2.112068,-1.90454 h 12.406397 c 1.167468,0 2.112068,0.85178 2.112068,1.90454 z\" id=\"loc27\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"M 69.176993,135.40478 H 52.54646 v -13.09192 c 0,-1.05276 0.9446,-1.90454 2.112068,-1.90454 h 12.406397 c 1.167468,0 2.112068,0.85178 2.112068,1.90454 z\" id=\"loc26\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"M 94.122792,135.40478 H 77.49226 v -13.09192 c 0,-1.05276 0.944599,-1.90454 2.112067,-1.90454 h 12.406397 c 1.167469,0 2.112068,0.85178 2.112068,1.90454 z\" id=\"loc25\"/>\n    <polygon style=\"fill:#ff6600\" points=\"35.309,132.414 476.689,132.414 476.689,114.759 35.309,114.759 \" id=\"polygon282\" transform=\"matrix(0.18839246,0,0,0.16988154,190.73123,115.90935)\"/>\n    <polygon style=\"fill:#ff6600\" points=\"35.309,300.138 476.689,300.138 476.689,282.483 35.309,282.483 \" id=\"polygon284\" transform=\"matrix(0.18839246,0,0,0.16988154,190.73123,115.90935)\"/>\n    <polygon style=\"fill:#ff6600\" points=\"35.309,467.862 476.689,467.862 476.689,450.207 35.309,450.207 \" id=\"polygon286\" transform=\"matrix(0.18839246,0,0,0.16988154,190.73123,115.90935)\"/>\n    <polygon style=\"fill:#ff6600\" points=\"35.309,114.759 35.309,132.414 476.689,132.414 476.689,114.759 \" id=\"polygon282-8\" transform=\"matrix(0.18839246,0,0,0.16988154,101.2029,115.90935)\"/>\n    <polygon style=\"fill:#ff6600\" points=\"35.309,282.483 35.309,300.138 476.689,300.138 476.689,282.483 \" id=\"polygon284-6\" transform=\"matrix(0.18839246,0,0,0.16988154,101.2029,115.90935)\"/>\n    <polygon style=\"fill:#ff6600\" points=\"35.309,450.207 35.309,467.862 476.689,467.862 476.689,450.207 \" id=\"polygon286-6\" transform=\"matrix(0.18839246,0,0,0.16988154,101.2029,115.90935)\"/>\n    <polygon style=\"fill:#ff6600\" points=\"35.309,114.759 35.309,132.414 476.689,132.414 476.689,114.759 \" id=\"polygon282-8-2\" transform=\"matrix(0.18839246,0,0,0.16988154,11.674642,115.90935)\"/>\n    <polygon style=\"fill:#ff6600\" points=\"35.309,282.483 35.309,300.138 476.689,300.138 476.689,282.483 \" id=\"polygon284-6-9\" transform=\"matrix(0.18839246,0,0,0.16988154,11.674642,115.90935)\"/>\n    <polygon style=\"fill:#ff6600\" points=\"35.309,450.207 35.309,467.862 476.689,467.862 476.689,450.207 \" id=\"polygon286-6-9\" transform=\"matrix(0.18839246,0,0,0.16988154,11.674642,115.90935)\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"m 222.32917,80.209771 h -16.63054 v -13.09192 c 0,-1.052756 0.9446,-1.904542 2.11207,-1.904542 h 12.4064 c 1.16747,0 2.11207,0.851786 2.11207,1.904542 z\" id=\"loc39\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"m 247.27497,80.209771 h -16.63054 v -13.09192 c 0,-1.052756 0.9446,-1.904542 2.11207,-1.904542 h 12.4064 c 1.16747,0 2.11207,0.851786 2.11207,1.904542 z\" id=\"loc38\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"m 272.22077,80.209771 h -16.63054 v -13.09192 c 0,-1.052756 0.9446,-1.904542 2.11207,-1.904542 h 12.4064 c 1.16747,0 2.11207,0.851786 2.11207,1.904542 z\" id=\"loc37\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"M 222.32917,108.70298 H 205.69863 V 95.611232 c 0,-1.052756 0.9446,-1.904542 2.11207,-1.904542 h 12.4064 c 1.16747,0 2.11207,0.851786 2.11207,1.904542 z\" id=\"loc30\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"M 247.27497,108.70298 H 230.64443 V 95.611232 c 0,-1.052756 0.9446,-1.904542 2.11207,-1.904542 h 12.4064 c 1.16747,0 2.11207,0.851786 2.11207,1.904542 z\" id=\"loc29\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"M 272.22077,108.70298 H 255.59023 V 95.611232 c 0,-1.052756 0.9446,-1.904542 2.11207,-1.904542 h 12.4064 c 1.16747,0 2.11207,0.851786 2.11207,1.904542 z\" id=\"loc28\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"M 222.32917,51.71656 H 205.69863 V 38.624639 c 0,-1.052756 0.9446,-1.904542 2.11207,-1.904542 h 12.4064 c 1.16747,0 2.11207,0.851786 2.11207,1.904542 z\" id=\"loc48\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"M 247.27497,51.71656 H 230.64443 V 38.624639 c 0,-1.052756 0.9446,-1.904542 2.11207,-1.904542 h 12.4064 c 1.16747,0 2.11207,0.851786 2.11207,1.904542 z\" id=\"loc47\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"M 272.22077,51.71656 H 255.59023 V 38.624639 c 0,-1.052756 0.9446,-1.904542 2.11207,-1.904542 h 12.4064 c 1.16747,0 2.11207,0.851786 2.11207,1.904542 z\" id=\"loc46\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"m 133.17239,78.959779 h -16.63054 v -13.09192 c 0,-1.052756 0.9446,-1.904542 2.11207,-1.904542 h 12.4064 c 1.16747,0 2.11207,0.851786 2.11207,1.904542 z\" id=\"loc42\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"m 158.11819,78.959779 h -16.63054 v -13.09192 c 0,-1.052756 0.9446,-1.904542 2.11207,-1.904542 h 12.4064 c 1.16747,0 2.11207,0.851786 2.11207,1.904542 z\" id=\"loc41\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"m 183.06399,78.959779 h -16.63054 v -13.09192 c 0,-1.052756 0.9446,-1.904542 2.11207,-1.904542 h 12.4064 c 1.16747,0 2.11207,0.851786 2.11207,1.904542 z\" id=\"loc40\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"M 133.17239,107.45299 H 116.54185 V 94.36124 c 0,-1.052756 0.9446,-1.904542 2.11207,-1.904542 h 12.4064 c 1.16747,0 2.11207,0.851786 2.11207,1.904542 z\" id=\"loc33\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"M 158.11819,107.45299 H 141.48765 V 94.36124 c 0,-1.052756 0.9446,-1.904542 2.11207,-1.904542 h 12.4064 c 1.16747,0 2.11207,0.851786 2.11207,1.904542 z\" id=\"loc32\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"M 183.06399,107.45299 H 166.43345 V 94.36124 c 0,-1.052756 0.9446,-1.904542 2.11207,-1.904542 h 12.4064 c 1.16747,0 2.11207,0.851786 2.11207,1.904542 z\" id=\"loc31\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"M 133.17239,50.466568 H 116.54185 V 37.374647 c 0,-1.052756 0.9446,-1.904542 2.11207,-1.904542 h 12.4064 c 1.16747,0 2.11207,0.851786 2.11207,1.904542 z\" id=\"loc51\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"M 158.11819,50.466568 H 141.48765 V 37.374647 c 0,-1.052756 0.9446,-1.904542 2.11207,-1.904542 h 12.4064 c 1.16747,0 2.11207,0.851786 2.11207,1.904542 z\" id=\"loc50\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"M 183.06399,50.466568 H 166.43345 V 37.374647 c 0,-1.052756 0.9446,-1.904542 2.11207,-1.904542 h 12.4064 c 1.16747,0 2.11207,0.851786 2.11207,1.904542 z\" id=\"loc49\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"M 44.231192,78.710227 H 27.600659 v -13.09192 c 0,-1.052756 0.9446,-1.904542 2.112068,-1.904542 h 12.406397 c 1.167468,0 2.112068,0.851786 2.112068,1.904542 z\" id=\"loc45\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"M 69.176991,78.710227 H 52.546458 v -13.09192 c 0,-1.052756 0.9446,-1.904542 2.112068,-1.904542 h 12.406397 c 1.167468,0 2.112068,0.851786 2.112068,1.904542 z\" id=\"loc44\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"M 94.12279,78.710227 H 77.492258 v -13.09192 c 0,-1.052756 0.944599,-1.904542 2.112067,-1.904542 h 12.406397 c 1.167469,0 2.112068,0.851786 2.112068,1.904542 z\" id=\"loc43\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"M 44.231192,107.20344 H 27.600659 V 94.111688 c 0,-1.052756 0.9446,-1.904542 2.112068,-1.904542 h 12.406397 c 1.167468,0 2.112068,0.851786 2.112068,1.904542 z\" id=\"loc36\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"M 69.176991,107.20344 H 52.546458 V 94.111688 c 0,-1.052756 0.9446,-1.904542 2.112068,-1.904542 h 12.406397 c 1.167468,0 2.112068,0.851786 2.112068,1.904542 z\" id=\"loc35\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"M 94.12279,107.20344 H 77.492258 V 94.111688 c 0,-1.052756 0.944599,-1.904542 2.112067,-1.904542 h 12.406397 c 1.167469,0 2.112068,0.851786 2.112068,1.904542 z\" id=\"loc34\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"M 44.231192,50.217016 H 27.600659 V 37.125095 c 0,-1.052756 0.9446,-1.904542 2.112068,-1.904542 h 12.406397 c 1.167468,0 2.112068,0.851786 2.112068,1.904542 z\" id=\"loc54\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"M 69.176991,50.217016 H 52.546458 V 37.125095 c 0,-1.052756 0.9446,-1.904542 2.112068,-1.904542 h 12.406397 c 1.167468,0 2.112068,0.851786 2.112068,1.904542 z\" id=\"loc53\"/>\n    <path style=\"fill:#21303d;stroke-width:0.178898\" d=\"M 94.12279,50.217016 H 77.492258 V 37.125095 c 0,-1.052756 0.944599,-1.904542 2.112067,-1.904542 h 12.406397 c 1.167469,0 2.112068,0.851786 2.112068,1.904542 z\" id=\"loc52\"/>\n    <polygon style=\"fill:#ff6600\" points=\"476.689,132.414 476.689,114.759 35.309,114.759 35.309,132.414 \" id=\"polygon282-6\" transform=\"matrix(0.18839246,0,0,0.16988154,190.73123,30.72158)\"/>\n    <polygon style=\"fill:#ff6600\" points=\"476.689,300.138 476.689,282.483 35.309,282.483 35.309,300.138 \" id=\"polygon284-1\" transform=\"matrix(0.18839246,0,0,0.16988154,190.73123,30.72158)\"/>\n    <polygon style=\"fill:#ff6600\" points=\"476.689,467.862 476.689,450.207 35.309,450.207 35.309,467.862 \" id=\"polygon286-4\" transform=\"matrix(0.18839246,0,0,0.16988154,190.73123,30.72158)\"/>\n    <polygon style=\"fill:#ff6600\" points=\"35.309,132.414 476.689,132.414 476.689,114.759 35.309,114.759 \" id=\"polygon282-8-5\" transform=\"matrix(0.18839246,0,0,0.16988154,101.2029,30.72158)\"/>\n    <polygon style=\"fill:#ff6600\" points=\"35.309,300.138 476.689,300.138 476.689,282.483 35.309,282.483 \" id=\"polygon284-6-3\" transform=\"matrix(0.18839246,0,0,0.16988154,101.2029,30.72158)\"/>\n    <polygon style=\"fill:#ff6600\" points=\"35.309,467.862 476.689,467.862 476.689,450.207 35.309,450.207 \" id=\"polygon286-6-3\" transform=\"matrix(0.18839246,0,0,0.16988154,101.2029,30.72158)\"/>\n    <polygon style=\"fill:#ff6600\" points=\"35.309,132.414 476.689,132.414 476.689,114.759 35.309,114.759 \" id=\"polygon282-8-2-7\" transform=\"matrix(0.18839246,0,0,0.16988154,11.67464,30.72158)\"/>\n    <polygon style=\"fill:#ff6600\" points=\"35.309,300.138 476.689,300.138 476.689,282.483 35.309,282.483 \" id=\"polygon284-6-9-0\" transform=\"matrix(0.18839246,0,0,0.16988154,11.67464,30.72158)\"/>\n    <polygon style=\"fill:#ff6600\" points=\"35.309,467.862 476.689,467.862 476.689,450.207 35.309,450.207 \" id=\"polygon286-6-9-5\" transform=\"matrix(0.18839246,0,0,0.16988154,11.67464,30.72158)\"/>\n    <g id=\"g294\" transform=\"matrix(0.18839246,0,0,0.32720675,190.73123,35.35884)\" style=\"fill:#008080\">\n\t\t<path style=\"fill:#008080\" d=\"M 35.31,512 H 0 V 17.655 C 0,7.901 7.901,0 17.655,0 27.409,0 35.31,7.901 35.31,17.655 Z\" id=\"path290\"/>\n\n\t\t<path style=\"fill:#008080\" d=\"M 512,512 H 476.69 V 17.655 C 476.69,7.901 484.59,0 494.345,0 504.1,0 512,7.901 512,17.655 Z\" id=\"path292\"/>\n\n\t</g>\n    <g id=\"g294-2\" transform=\"matrix(0.18839246,0,0,0.32720675,11.881817,35.35884)\" style=\"fill:#008080\">\n      <path style=\"fill:#008080\" d=\"M 35.31,512 H 0 V 17.655 C 0,7.901 7.901,0 17.655,0 27.409,0 35.31,7.901 35.31,17.655 Z\" id=\"path290-6\"/>\n      <path style=\"fill:#008080\" d=\"M 512,512 H 476.69 V 17.655 C 476.69,7.901 484.59,0 494.345,0 504.1,0 512,7.901 512,17.655 Z\" id=\"path292-8\"/>\n    </g>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"243.67519\" y=\"189.7471\" id=\"text15350\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan15348\" style=\"stroke-width:0.247081\" x=\"243.67519\" y=\"189.7471\">1</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"220.39728\" y=\"189.74709\" id=\"text16842\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan16840\" style=\"stroke-width:0.247081\" x=\"220.39728\" y=\"189.74709\">2</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"197.36699\" y=\"189.74707\" id=\"text18400\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan18398\" style=\"stroke-width:0.247081\" x=\"197.36699\" y=\"189.74707\">3</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"161.21194\" y=\"188.75653\" id=\"text20047\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan20045\" style=\"stroke-width:0.247081\" x=\"161.21194\" y=\"188.75653\">4</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"137.43877\" y=\"188.51003\" id=\"text21329\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan21327\" style=\"stroke-width:0.247081\" x=\"137.43877\" y=\"188.51003\">5</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"113.91431\" y=\"188.75653\" id=\"text22425\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan22423\" style=\"stroke-width:0.247081\" x=\"113.91431\" y=\"188.75653\">6</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"77.510498\" y=\"188.5089\" id=\"text23587\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan23585\" style=\"stroke-width:0.247081\" x=\"77.510498\" y=\"188.5089\">7</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"53.491898\" y=\"188.01363\" id=\"text24671\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan24669\" style=\"stroke-width:0.247081\" x=\"53.491898\" y=\"188.01363\">8</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"31.449947\" y=\"188.01361\" id=\"text26007\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan26005\" style=\"stroke-width:0.247081\" x=\"31.449947\" y=\"188.01361\">9</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"241.44757\" y=\"159.04118\" id=\"text27883\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan27881\" style=\"stroke-width:0.247081\" x=\"241.44757\" y=\"159.04118\">10</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"217.67438\" y=\"159.28659\" id=\"text29671\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan29669\" style=\"stroke-width:0.247081\" x=\"217.67438\" y=\"159.28659\">11</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"194.64188\" y=\"159.2888\" id=\"text31203\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan31201\" style=\"stroke-width:0.247081\" x=\"194.64188\" y=\"159.2888\">12</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"157.99377\" y=\"158.04948\" id=\"text32485\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan32483\" style=\"stroke-width:0.247081\" x=\"157.99377\" y=\"158.04948\">13</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"134.22058\" y=\"157.80186\" id=\"text34027\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan34025\" style=\"stroke-width:0.247081\" x=\"134.22058\" y=\"157.80186\">14</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"110.94267\" y=\"158.05063\" id=\"text36023\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan36021\" style=\"stroke-width:0.247081\" x=\"110.94267\" y=\"158.05063\">15</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"74.787605\" y=\"157.55534\" id=\"text37173\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan37171\" style=\"stroke-width:0.247081\" x=\"74.787605\" y=\"157.55534\">16</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"52.498016\" y=\"157.55424\" id=\"text39247\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan39245\" style=\"stroke-width:0.247081\" x=\"52.498016\" y=\"157.55424\">17</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"28.230663\" y=\"157.55423\" id=\"text40145\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan40143\" style=\"stroke-width:0.247081\" x=\"28.230663\" y=\"157.55423\">18</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"241.44649\" y=\"128.33301\" id=\"text42459\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan42457\" style=\"stroke-width:0.247081\" x=\"241.44649\" y=\"128.33301\">19</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"218.16853\" y=\"128.58176\" id=\"text43951\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan43949\" style=\"stroke-width:0.247081\" x=\"218.16853\" y=\"128.58176\">20</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"195.13828\" y=\"128.33301\" id=\"text45431\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan45429\" style=\"stroke-width:0.247081\" x=\"195.13828\" y=\"128.33301\">21</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"158.24254\" y=\"127.34246\" id=\"text47253\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan47251\" style=\"stroke-width:0.247081\" x=\"158.24254\" y=\"127.34246\">22</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"134.46822\" y=\"127.34135\" id=\"text48601\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan48599\" style=\"stroke-width:0.247081\" x=\"134.46822\" y=\"127.34135\">23</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"111.71768\" y=\"127.77781\" id=\"text49433\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan49431\" style=\"stroke-width:0.247081\" x=\"111.71768\" y=\"127.77781\">24</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"75.120506\" y=\"127.25249\" id=\"text50529\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan50527\" style=\"stroke-width:0.247081\" x=\"75.120506\" y=\"127.25249\">25</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"52.531822\" y=\"126.72717\" id=\"text51763\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan51761\" style=\"stroke-width:0.247081\" x=\"52.531822\" y=\"126.72717\">26</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"28.892506\" y=\"126.90228\" id=\"text52619\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan52617\" style=\"stroke-width:0.247081\" x=\"28.892506\" y=\"126.90228\">27</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"241.64638\" y=\"98.535095\" id=\"text54165\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan54163\" style=\"stroke-width:0.247081\" x=\"241.64638\" y=\"98.535095\">28</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"218.35727\" y=\"98.359978\" id=\"text55261\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan55259\" style=\"stroke-width:0.247081\" x=\"218.35727\" y=\"98.359978\">29</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"194.89307\" y=\"98.885307\" id=\"text55939\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan55937\" style=\"stroke-width:0.247081\" x=\"194.89307\" y=\"98.885307\">30</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"158.32707\" y=\"97.4533\" id=\"text56749\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan56747\" style=\"stroke-width:0.247081\" x=\"158.32707\" y=\"97.4533\">31</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"135.06911\" y=\"97.134239\" id=\"text57823\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan57821\" style=\"stroke-width:0.247081\" x=\"135.06911\" y=\"97.134239\">32</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"111.54259\" y=\"97.484451\" id=\"text58655\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan58653\" style=\"stroke-width:0.247081\" x=\"111.54259\" y=\"97.484451\">33</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"75.120506\" y=\"97.309341\" id=\"text59355\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan59353\" style=\"stroke-width:0.247081\" x=\"75.120506\" y=\"97.309341\">34</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"51.831398\" y=\"97.484444\" id=\"text60319\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan60317\" style=\"stroke-width:0.247081\" x=\"51.831398\" y=\"97.484444\">35</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"28.54229\" y=\"97.134247\" id=\"text66708\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan66706\" style=\"stroke-width:0.247081\" x=\"28.54229\" y=\"97.134247\">36</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"242.34679\" y=\"68.066628\" id=\"text67408\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan67406\" style=\"stroke-width:0.247081\" x=\"242.34679\" y=\"68.066628\">37</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"218.7075\" y=\"68.241737\" id=\"text68284\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan68282\" style=\"stroke-width:0.247081\" x=\"218.7075\" y=\"68.241737\">38</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"194.71796\" y=\"68.241737\" id=\"text69050\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan69048\" style=\"stroke-width:0.247081\" x=\"194.71796\" y=\"68.241737\">39</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"158.6461\" y=\"67.191101\" id=\"text69992\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan69990\" style=\"stroke-width:0.247081\" x=\"158.6461\" y=\"67.191101\">40</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"134.83168\" y=\"67.015991\" id=\"text70944\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan70942\" style=\"stroke-width:0.247081\" x=\"134.83168\" y=\"67.015991\">41</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"111.54257\" y=\"67.366203\" id=\"text71908\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan71906\" style=\"stroke-width:0.247081\" x=\"111.54257\" y=\"67.366203\">42</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"75.295616\" y=\"66.840889\" id=\"text73102\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan73100\" style=\"stroke-width:0.247081\" x=\"75.295616\" y=\"66.840889\">43</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"52.006504\" y=\"66.665779\" id=\"text73934\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan73932\" style=\"stroke-width:0.247081\" x=\"52.006504\" y=\"66.665779\">44</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"28.54229\" y=\"66.665779\" id=\"text74876\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan74874\" style=\"stroke-width:0.247081\" x=\"28.54229\" y=\"66.665779\">45</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"241.29619\" y=\"37.948383\" id=\"text76016\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan76014\" style=\"stroke-width:0.247081\" x=\"241.29619\" y=\"37.948383\">46</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"218.18219\" y=\"38.473701\" id=\"text77046\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan77044\" style=\"stroke-width:0.247081\" x=\"218.18219\" y=\"38.473701\">47</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"194.36775\" y=\"38.123489\" id=\"text77922\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan77920\" style=\"stroke-width:0.247081\" x=\"194.36775\" y=\"38.123489\">48</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"157.59547\" y=\"37.072853\" id=\"text78864\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan78862\" style=\"stroke-width:0.247081\" x=\"157.59547\" y=\"37.072853\">49</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"135.1819\" y=\"36.897747\" id=\"text79894\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan79892\" style=\"stroke-width:0.247081\" x=\"135.1819\" y=\"36.897747\">50</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"111.54257\" y=\"36.722641\" id=\"text80902\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan80900\" style=\"stroke-width:0.247081\" x=\"111.54257\" y=\"36.722641\">51</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"75.295616\" y=\"36.547535\" id=\"text82174\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan82172\" style=\"stroke-width:0.247081\" x=\"75.295616\" y=\"36.547535\">52</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"52.181614\" y=\"36.547535\" id=\"text82940\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan82938\" style=\"stroke-width:0.247081\" x=\"52.181614\" y=\"36.547535\">53</tspan></text>\n    <text xml:space=\"preserve\" style=\"font-size:7.90661px;line-height:1.25;font-family:sans-serif;stroke-width:0.247081\" x=\"28.748552\" y=\"36.341274\" id=\"text83508\" transform=\"scale(1.0708341,0.93385146)\"><tspan sodipodi:role=\"line\" id=\"tspan83506\" style=\"stroke-width:0.247081\" x=\"28.748552\" y=\"36.341274\">54</tspan></text>\n  </g>\n</svg>",
+        "clickableShapes": [],
+        "javascriptHandlers": [],
+        "smilAnimations": [],
+        "bindings": [],
+        "showCoordinates": false,
+        "autoFormatAfterEdit": false,
+        "showBrowserErrors": false,
+        "showBrowserEvents": false,
+        "enableJsDebugging": false,
+        "sendMsgWhenLoaded": false,
+        "noClickWhenDblClick": false,
+        "outputField": "payload",
+        "editorUrl": "//drawsvg.org/drawsvg.html",
+        "directory": "",
+        "panning": "disabled",
+        "zooming": "disabled",
+        "panOnlyWhenZoomed": false,
+        "doubleClickZoomEnabled": false,
+        "mouseWheelZoomEnabled": false,
+        "dblClickZoomPercentage": 150,
+        "cssString": "div.ui-svg svg{\n    color: var(--nr-dashboard-widgetColor);\n    fill: currentColor !important;\n}\ndiv.ui-svg path {\n    fill: inherit;\n}",
+        "name": "",
+        "x": 760,
+        "y": 1520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ea9fa88e72a65ab4",
+        "type": "postgrestor",
+        "z": "577ee28cb7143dd2",
+        "name": "Get Table Location",
+        "query": "SELECT * FROM location_rack\norder by rack_no ;\n",
+        "postgresDB": "ccdc5790adefc801",
+        "output": true,
+        "outputs": 1,
+        "x": 350,
+        "y": 1520,
+        "wires": [
+            [
+                "fdaa9406b96a4dda"
+            ]
+        ]
+    },
+    {
+        "id": "fdaa9406b96a4dda",
+        "type": "function",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "func": "var i;\nvar loc;\nvar id_pallet;\nlist_command = [];\nfor (i = 0; i < msg.payload.rows.length; i++) \n{\n    loc = msg.payload.rows[i]['rack_no'];\n    id_pallet = msg.payload.rows[i]['id_pallet'];\n    \n    selector = \"#loc\" + loc;\n    if (id_pallet==null)\n    {\n        visible = \"hidden\";\n    }\n    else\n    {\n        visible = \"visible\";\n    }\n    \n    list_command.push({        \n        \"command\": \"set_style\",\n        \"selector\": selector,\n        \"attributeName\": \"visibility\",\n        \"attributeValue\": visible});\n}\n\n\nmsg.payload = list_command;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 1520,
+        "wires": [
+            [
+                "9e2dda9954d06318",
+                "e8f003f6149e54cd"
+            ]
+        ]
+    },
+    {
+        "id": "e8f003f6149e54cd",
+        "type": "postgrestor",
+        "z": "577ee28cb7143dd2",
+        "name": "Get color",
+        "query": "SELECT a.*,b.color FROM location_rack a \ninner join master_material b on a.id_pallet=b.id_pallet\norder by a.rack_no ;\n",
+        "postgresDB": "ccdc5790adefc801",
+        "output": true,
+        "outputs": 1,
+        "x": 320,
+        "y": 1580,
+        "wires": [
+            [
+                "19af15be1ceb4e1f"
+            ]
+        ]
+    },
+    {
+        "id": "19af15be1ceb4e1f",
+        "type": "function",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "func": "var i;\nvar loc;\nvar color;\nlist_command = [];\nfor (i = 0; i < msg.payload.rows.length; i++) \n{\n    loc = msg.payload.rows[i]['rack_no'];\n    color = msg.payload.rows[i]['color'];\n    \n    selector = \"#loc\" + loc;\n    \n    list_command.push({        \n        \"command\": \"set_style\",\n        \"selector\": selector,\n        \"attributeName\": \"fill\",\n        \"attributeValue\": color});\n}\n\nmsg.payload = list_command;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 1580,
+        "wires": [
+            [
+                "9e2dda9954d06318"
+            ]
+        ]
+    },
+    {
+        "id": "b47dcea11da38628",
+        "type": "inject",
+        "z": "577ee28cb7143dd2",
+        "name": "Initial",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 1520,
+        "wires": [
+            [
+                "ea9fa88e72a65ab4",
+                "57efd7a9e90cbc78"
+            ]
+        ]
+    },
+    {
+        "id": "c6fc63352cc7ed5f",
+        "type": "postgrestor",
+        "z": "577ee28cb7143dd2",
+        "name": "Get Total",
+        "query": "SELECT count(rack_no) as total_loc FROM location_rack\nWhere id_pallet is not null\n",
+        "postgresDB": "ccdc5790adefc801",
+        "output": true,
+        "outputs": 1,
+        "x": 360,
+        "y": 1420,
+        "wires": [
+            [
+                "1ae9d21d80508434",
+                "e42ab85b354fbedf"
+            ]
+        ]
+    },
+    {
+        "id": "1ae9d21d80508434",
+        "type": "function",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "func": "var loc = msg.payload.rows[0].total_loc;\nvar cap = (loc / 54)*100;\nmsg.payload = cap.toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 1420,
+        "wires": [
+            [
+                "9bd2f090c2328688"
+            ]
+        ]
+    },
+    {
+        "id": "9bd2f090c2328688",
+        "type": "ui_gauge",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "group": "13afc917589beae6",
+        "order": 1,
+        "width": "6",
+        "height": "4",
+        "gtype": "gage",
+        "title": "Utilization",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 720,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "e42ab85b354fbedf",
+        "type": "postgrestor",
+        "z": "577ee28cb7143dd2",
+        "name": "Get Total",
+        "query": "select a.id_pallet,b.\"name\",sum(b.value) as total from location_rack a \ninner join master_material b on a.id_pallet=b.id_pallet \nwhere a.id_pallet is not null\ngroup by a.id_pallet,b.\"name\" order by total desc",
+        "postgresDB": "ccdc5790adefc801",
+        "output": true,
+        "outputs": 1,
+        "x": 360,
+        "y": 1460,
+        "wires": [
+            [
+                "6269da62ebf5cfed"
+            ]
+        ]
+    },
+    {
+        "id": "a3b5d453206b8584",
+        "type": "ui_chart",
+        "z": "577ee28cb7143dd2",
+        "name": "",
+        "group": "13afc917589beae6",
+        "order": 2,
+        "width": "11",
+        "height": "4",
+        "label": "Total Value of Material",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 760,
+        "y": 1460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6269da62ebf5cfed",
+        "type": "function",
+        "z": "577ee28cb7143dd2",
+        "name": "create array",
+        "func": "var data = [];\nvar label = [];\nvar i;\ndata.push([]);\nfor (i = 0; i < msg.payload.rows.length; i++) \n{\n  data[0].push(msg.payload.rows[i][\"total\"]);\n}\n\nfor (i = 0; i < msg.payload.rows.length; i++) \n{\n  label.push(msg.payload.rows[i][\"name\"]);\n}\n\nvar m={\n    \"series\":[\"Total Value (USD)\"],\n    \"data\":data,\n    \"labels\":label\n};\n\n\nreturn {payload:[m]};\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 1460,
+        "wires": [
+            [
+                "a3b5d453206b8584"
+            ]
+        ]
+    },
+    {
+        "id": "8925beb134134efd",
+        "type": "s7 endpoint",
+        "transport": "iso-on-tcp",
+        "address": "192.168.0.1",
+        "port": "102",
+        "rack": "0",
+        "slot": "2",
+        "localtsaphi": "01",
+        "localtsaplo": "00",
+        "remotetsaphi": "01",
+        "remotetsaplo": "00",
+        "connmode": "tsap",
+        "adapter": "",
+        "busaddr": "2",
+        "cycletime": "1000",
+        "timeout": "2000",
+        "name": "",
+        "vartable": [
+            {
+                "addr": "M0.0",
+                "name": "Start"
+            },
+            {
+                "addr": "M0.1",
+                "name": "Store"
+            },
+            {
+                "addr": "M0.6",
+                "name": "Reset"
+            },
+            {
+                "addr": "DB10,WORD0",
+                "name": "Target"
+            },
+            {
+                "addr": "DB10,WORD2",
+                "name": "Target2"
+            },
+            {
+                "addr": "M0.2",
+                "name": "Retrieve"
+            },
+            {
+                "addr": "M0.3",
+                "name": "Busy"
+            },
+            {
+                "addr": "I1.1",
+                "name": "At Load"
+            },
+            {
+                "addr": "IW100",
+                "name": "ID_pallet"
+            }
+        ]
+    },
+    {
+        "id": "f84d599e9aa51161",
+        "type": "ui_group",
+        "name": "Reset",
+        "tab": "f14e8145da1cd4fa",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7517187c6d3c08b1",
+        "type": "ui_group",
+        "name": "Incoming Pallet Supply",
+        "tab": "f14e8145da1cd4fa",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f55e4b3bbb0b8418",
+        "type": "ui_group",
+        "name": "Incoming Pallet Recognition",
+        "tab": "f14e8145da1cd4fa",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "840e28708c2e0aba",
+        "type": "ui_group",
+        "name": "Start Retrieving Pallet",
+        "tab": "f14e8145da1cd4fa",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ccdc5790adefc801",
+        "type": "postgresDB",
+        "name": "postgres@127.0.0.1:5432/asrs",
+        "host": "127.0.0.1",
+        "hostFieldType": "str",
+        "port": "5432",
+        "portFieldType": "num",
+        "database": "asrs",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "max": "10",
+        "maxFieldType": "num",
+        "min": "1",
+        "minFieldType": "num",
+        "idle": "1000",
+        "idleFieldType": "num",
+        "connectionTimeout": "10000",
+        "connectionTimeoutFieldType": "num",
+        "user": "postgres",
+        "userFieldType": "str",
+        "password": "123",
+        "passwordFieldType": "str"
+    },
+    {
+        "id": "13afc917589beae6",
+        "type": "ui_group",
+        "name": "Location Data",
+        "tab": "f14e8145da1cd4fa",
+        "order": 2,
+        "disp": true,
+        "width": "18",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ca8352cc86b78523",
+        "type": "ui_group",
+        "name": "Location Visualization",
+        "tab": "f14e8145da1cd4fa",
+        "order": 6,
+        "disp": true,
+        "width": "18",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f14e8145da1cd4fa",
+        "type": "ui_tab",
+        "name": "ASRS Factory IO Control",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    }
+]
